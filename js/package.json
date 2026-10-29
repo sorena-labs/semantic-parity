@@ -1,0 +1,55 @@
+{
+  "name": "semantic-parity",
+  "version": "0.1.0",
+  "description": "Compare a browser accessibility tree with a Flutter semantics tree, so a component built for the web and for Flutter reads and moves the same for keyboards and screen readers.",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "aria",
+    "flutter",
+    "semantics",
+    "playwright",
+    "testing",
+    "design-system",
+    "keyboard",
+    "screen-reader"
+  ],
+  "license": "MIT",
+  "author": "Sorena Labs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorena-labs/semantic-parity.git",
+    "directory": "js"
+  },
+  "bugs": "https://github.com/sorena-labs/semantic-parity/issues",
+  "homepage": "https://github.com/sorena-labs/semantic-parity#readme",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "semantic-parity": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "playwright": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

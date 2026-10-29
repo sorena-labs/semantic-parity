@@ -1,0 +1,441 @@
+[
+  {
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News"
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal",
+            "checked": true
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron"
+          }
+        ]
+      }
+    ],
+    "focus": null
+  },
+  {
+    "step": {
+      "focus": {
+        "role": "checkbox",
+        "name": "News"
+      }
+    },
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News"
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal",
+            "checked": true
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron"
+          }
+        ]
+      }
+    ],
+    "focus": {
+      "role": "checkbox",
+      "name": "News"
+    }
+  },
+  {
+    "step": {
+      "press": "Space"
+    },
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News",
+        "checked": true
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal",
+            "checked": true
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron"
+          }
+        ]
+      }
+    ],
+    "focus": {
+      "role": "checkbox",
+      "name": "News"
+    }
+  },
+  {
+    "step": {
+      "press": "Tab"
+    },
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News",
+        "checked": true
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal",
+            "checked": true
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron"
+          }
+        ]
+      }
+    ],
+    "focus": {
+      "role": "switch",
+      "name": "Weekly digest"
+    }
+  },
+  {
+    "step": {
+      "focus": {
+        "role": "radio",
+        "name": "Teal"
+      }
+    },
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News",
+        "checked": true
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal",
+            "checked": true
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron"
+          }
+        ]
+      }
+    ],
+    "focus": {
+      "role": "radio",
+      "name": "Teal"
+    }
+  },
+  {
+    "step": {
+      "press": "ArrowDown"
+    },
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News",
+        "checked": true
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal"
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron",
+            "checked": true
+          }
+        ]
+      }
+    ],
+    "focus": {
+      "role": "radio",
+      "name": "Saffron"
+    }
+  },
+  {
+    "step": {
+      "press": "ArrowDown"
+    },
+    "tree": [
+      {
+        "role": "heading",
+        "name": "Sign up",
+        "level": 1
+      },
+      {
+        "role": "text",
+        "name": "Pick what you want."
+      },
+      {
+        "role": "checkbox",
+        "name": "News",
+        "checked": true
+      },
+      {
+        "role": "switch",
+        "name": "Weekly digest",
+        "checked": true
+      },
+      {
+        "role": "textbox",
+        "name": "Name"
+      },
+      {
+        "role": "button",
+        "name": "Save"
+      },
+      {
+        "role": "button",
+        "name": "Off",
+        "disabled": true
+      },
+      {
+        "role": "radiogroup",
+        "name": "Colour",
+        "children": [
+          {
+            "role": "radio",
+            "name": "Teal",
+            "checked": true
+          },
+          {
+            "role": "radio",
+            "name": "Plum",
+            "disabled": true
+          },
+          {
+            "role": "radio",
+            "name": "Saffron"
+          }
+        ]
+      }
+    ],
+    "focus": {
+      "role": "radio",
+      "name": "Teal"
+    }
+  }
+]

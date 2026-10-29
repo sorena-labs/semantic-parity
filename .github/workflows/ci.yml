@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  dart:
+    runs-on: ubuntu-latest
+    strategy:
+      # Every combination reports its own result, instead of one failure cancelling the rest.
+      fail-fast: false
+      matrix:
+        include:
+          - name: Flutter 3.44
+            version: 3.44.x
+          - name: Flutter stable
+            version: ""
+    name: ${{ matrix.name }}
+    defaults:
+      run:
+        working-directory: dart
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ matrix.version }}
+      - run: flutter pub get
+      # Formatting can change between Dart versions, so only the newest one checks it.
+      - if: matrix.version == ''
+        run: dart format --set-exit-if-changed .
+      - run: flutter analyze
+      # Also checks that fixtures/flutter/form.json is current.
+      - run: flutter test
+
+  js:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    name: Node ${{ matrix.node }}
+    defaults:
+      run:
+        working-directory: js
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: js/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run typecheck
+      # Also records fixtures/form.html into build/parity/web and compares it with the Flutter recording.
+      - run: npm test
+      - run: npm run build
+      - run: node dist/cli.js build/parity/web ../fixtures/flutter

@@ -1,0 +1,24 @@
+name: semantic_parity
+description: Record a Flutter semantics tree in a widget test, in the JSON shape of a browser accessibility tree, to check that a component built for the web and for Flutter behaves the same.
+version: 0.1.0
+repository: https://github.com/sorena-labs/semantic-parity
+issue_tracker: https://github.com/sorena-labs/semantic-parity/issues
+topics:
+  - accessibility
+  - semantics
+  - testing
+  - a11y
+  - keyboard
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0

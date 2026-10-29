@@ -1,0 +1,8 @@
+[
+  { "focus": { "role": "checkbox", "name": "News" } },
+  { "press": "Space" },
+  { "press": "Tab" },
+  { "focus": { "role": "radio", "name": "Teal" } },
+  { "press": "ArrowDown" },
+  { "press": "ArrowDown" }
+]
