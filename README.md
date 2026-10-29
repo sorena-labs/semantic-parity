@@ -24,14 +24,17 @@ Two packages come from this repository:
 
 | Package | Registry | What it does |
 |---|---|---|
-| [`semantic-parity`](js) | npm | Records in a Playwright test, and the `semantic-parity` command that compares |
-| [`semantic_parity`](dart) | pub.dev | Records in a Flutter widget test |
+| [`semantic-parity`](https://www.npmjs.com/package/semantic-parity) | npm | Records in a Playwright test, and the `semantic-parity` command that compares |
+| [`semantic_parity`](https://pub.dev/packages/semantic_parity) | pub.dev | Records in a Flutter widget test |
 
-Neither is published yet, so to try it, run it on the example form in this repository.
+```bash
+npm install --save-dev semantic-parity
+flutter pub add --dev semantic_parity
+```
 
 ## Try it
 
-`fixtures/` holds one sign-up form built both ways, `form.html` and a Flutter widget, and one keyboard script for both. Its Flutter recording is already in `fixtures/flutter/`. This records the browser side and compares the two (needs Node 22 or later):
+To see it work before adding it to your own tests, run it on the example form in this repository. `fixtures/` holds one sign-up form built both ways, `form.html` and a Flutter widget, and one keyboard script for both. Its Flutter recording is already in `fixtures/flutter/`. This records the browser side and compares the two (needs Node 22 or later):
 
 ```bash
 git clone https://github.com/sorena-labs/semantic-parity.git

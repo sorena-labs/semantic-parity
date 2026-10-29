@@ -31,7 +31,7 @@
     }
   },
   "bin": {
-    "semantic-parity": "./dist/cli.js"
+    "semantic-parity": "dist/cli.js"
   },
   "files": [
     "dist"
