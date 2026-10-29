@@ -110,6 +110,31 @@ Then each state is compared: the tree node by node, then the focused node by rol
 
 Descriptions, hints, link addresses, placeholders, sizes and actions are not compared.
 
+## Allowing a difference
+
+Some differences are deliberate. List them in a JSON file and pass it with `--allow`:
+
+```bash
+npx semantic-parity --allow parity.allow.json build/parity/web build/parity/flutter
+```
+
+```json
+[
+  {
+    "file": "sign-up.json",
+    "path": "textbox \"Email\"",
+    "field": "invalid",
+    "web": true,
+    "flutter": null,
+    "reason": "The Flutter field shows its error below it and does not mark itself invalid yet."
+  }
+]
+```
+
+Each entry needs a `reason`. It can also have `file` (the recording's path inside the folders), `path`, `field`, `web` and `flutter`, as the command prints them. Every one of those the entry has must equal the difference's, and one it leaves out matches anything, so `{ "field": "invalid", "reason": "..." }` allows that field everywhere. `null` stands for none; a name is `"Teal"` and a node is `"radio \"Teal\""`.
+
+Allowed differences are left out of the report and counted at the end. An entry that matches no difference fails the run, so the file only holds differences that still happen.
+
 ## How Flutter maps to ARIA
 
 | Flutter | ARIA |
@@ -134,7 +159,7 @@ Descriptions, hints, link addresses, placeholders, sizes and actions are not com
 
 - The web side needs Playwright 1.63 or later, for `Locator.ariaSnapshotJSON()`. Focus is the element with DOM focus; `aria-activedescendant` is not followed.
 - The Flutter side needs Flutter 3.44 or later.
-- Some differences are real but deliberate, such as a web form showing a `<label>` as text beside its input where Flutter puts the label inside the field. There is no list of allowed differences yet.
+- Some differences are real but deliberate, such as a web form showing a `<label>` as text beside its input where Flutter puts the label inside the field. Because children are matched by position, a node that only one side has shifts every sibling after it, so [allowing](#allowing-a-difference) it takes one entry for each of them.
 
 ## Contributing
 
