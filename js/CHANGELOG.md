@@ -2,7 +2,7 @@
 
 Every release, newest first. Versions follow [semantic versioning](https://semver.org).
 
-## Unreleased
+## 0.2.0
 
 - `semantic-parity --allow <file>` leaves out the deliberate differences listed in that file, each with a reason, and fails when an entry no longer matches any difference.
 - The command names a recording that is not valid JSON or not a recording and exits with 2, instead of crashing with a stack trace.

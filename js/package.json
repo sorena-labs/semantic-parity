@@ -1,6 +1,6 @@
 {
   "name": "semantic-parity",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Compare a browser accessibility tree with a Flutter semantics tree, so a component built for the web and for Flutter reads and moves the same for keyboards and screen readers.",
   "keywords": [
     "accessibility",
