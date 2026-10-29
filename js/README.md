@@ -30,7 +30,7 @@ Then compare with the Flutter recordings:
 npx semantic-parity build/parity/web build/parity/flutter
 ```
 
-It compares every `.json` file in one folder with the file at the same path in the other, prints each difference, and exits with 1 when any recording differs or is missing on one side.
+It compares every `.json` file in one folder with the file at the same path in the other and prints each difference. It exits with 0 when all match, 1 when any recording differs or is missing on one side, and 2 when a folder does not exist or the arguments are wrong.
 
 ## API
 
