@@ -22,10 +22,13 @@ Two packages come from this repository:
 
 | Package | Registry | What it does |
 |---|---|---|
-| [`semantic-parity`](js) | npm | Records in a Playwright test, and the `semantic-parity` command that compares |
-| [`semantic_parity`](dart) | pub.dev | Records in a Flutter widget test |
+| [`semantic-parity`](https://www.npmjs.com/package/semantic-parity) | npm | Records in a Playwright test, and the `semantic-parity` command that compares |
+| [`semantic_parity`](https://pub.dev/packages/semantic_parity) | pub.dev | Records in a Flutter widget test |
 
-Neither is published yet.
+```bash
+npm install --save-dev semantic-parity
+flutter pub add --dev semantic_parity
+```
 
 ## How it works
 
