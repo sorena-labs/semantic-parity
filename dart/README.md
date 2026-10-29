@@ -47,6 +47,8 @@ Takes a `snapshot`, then runs each step, waits for the frame to settle with `pum
 
 A step is `{'focus': {'role': ..., 'name': ...}}`, which sends `SemanticsAction.focus` to the node with that role and name, or `{'press': key}`, which sends that key: `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `PageUp`, `PageDown`, `Tab`, `Enter`, `Escape`, `Space`, `Backspace`, `Delete` or one character, after any of `Shift+`, `Control+`, `Alt+` and `Meta+`. These are Playwright's names, so one script runs on both sides.
 
+A key not in that list, or a focus step whose node does not exist or cannot take focus, throws, so the test fails instead of recording the wrong states.
+
 ### `snapshot(tester, {root})`
 
 Returns `{'tree': [...], 'focus': ...}`: the semantics tree under the widget `root` finds (the whole view when null), with roles and states in ARIA's words, and the role and name of the focused node, or `null`.

@@ -30,7 +30,7 @@ Then compare with the Flutter recordings:
 npx semantic-parity build/parity/web build/parity/flutter
 ```
 
-It compares every `.json` file in one folder with the file at the same path in the other, prints each difference, and exits with 1 when any recording differs or is missing on one side. It exits with 2 when it cannot read a recording.
+It compares every `.json` file in one folder with the file at the same path in the other and prints each difference. It exits with 0 when all match, 1 when any recording differs or is missing on one side, and 2 when the arguments are wrong, a folder does not exist, or a recording or the `--allow` file cannot be read.
 
 With `--allow <file>`, it leaves out the deliberate differences listed in that file, each with a reason, and also fails when an entry no longer matches any difference. The [repository README](https://github.com/sorena-labs/semantic-parity#allowing-a-difference) describes the format.
 
